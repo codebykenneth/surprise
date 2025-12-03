@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Love Letter</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #c084fc, #e9d5ff);
+    overflow-y: scroll;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200vh; /* Allow scrolling */
+    position: relative;
+  }
+
+  /* Top design: floating gradient hearts */
+  .top-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent);
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .top-heart {
+    position: absolute;
+    font-size: 25px;
+    color: #d8b4fe;
+    animation: floatTop 5s linear infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes floatTop {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(100px) scale(1.2); opacity: 0; }
+  }
+
+  .container {
+    width: 80%;
+    max-width: 750px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(14px);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.45);
+    animation: heartbeat 2s infinite;
+    position: relative;
+    z-index: 1;
+    margin-top: 180px;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.03); }
+    50% { transform: scale(1.06); }
+    75% { transform: scale(1.03); }
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px white;
+    margin-bottom: 25px;
+  }
+
+  #letter {
+    color: black;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    white-space: pre-line;
+    min-height: 250px;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+  }
+
+  button {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 35px;
+    background: #a855f7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 25px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  }
+
+  button:hover {
+    background: #9333ea;
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255,255,255,0.7);
+  }
+
+  .heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 24px;
+    color: #a855f7;
+    animation: floatUp linear infinite;
+    opacity: 0.85;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-110vh) scale(1.8); opacity: 0; }
+  }
+
+  /* Bottom picture */
+  .bottom-image {
+    width: 100%;
+    max-width: 600px;
+    opacity: 0.8;
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-design" id="topDesign"></div>
+
+<div class="container">
+  <h1>I loveyousomuch mommy🫶</h1>
+  <div id="letter"></div>
+  <button id="startBtn">Click the button mommy and play--- Old Love </button>
+</div>
+
+<!-- Bottom picture -->
+<img src="image/surprise.jpg" alt="Romantic decoration" class="bottom-image" />
+
+<audio id="music" src="music/oldlove.mp3"></audio>
+
+<script>
+  const fullMessage = 'hello mommy goodmorning iloveyousomuch i missyouosomuch mommy you are the best mommy in the whole wide world and i am so grateful to have you as my mommy my asawa and also my baby i promise that even we are far away from each other always remember that you are always in my heart and my tell every single day i promise to loveyou forever mommy and take care of you no matter what challenges we may face together you are my everything mommy and i will always cherish the moments we share together even though we are not always physically together our love still grows together mommy and i am so lucky to have you in my life mommmy i cannot wait to see ypu again and hold you in my arms again until then please take care of yourself and know that i am always here for you mommy iloveyousomuch 💜💜💜Mommy I love us more than words can ever describe 😌 Every moment we share bisan simple ra fills my heart with happiness and peace From our random talks little jokes cuddles to tiny disagreements nga dali ra ta magkabalik everything about us makes me feel like I am the luckiest person alive Ikaw ra gyud akong perfect match my safe place my home my everything Every time I see your smile or hear your laugh I fall in love with you all over again deeper than before I love how natural everything feels between us We can be silly together serious together or just quietly enjoy each others presence and it always feels right I love how you care for me in ways nga dili pirmi visible but I feel it deeply I love your patience your little surprises your gentle words and even your small jealous moments everything about you makes me feel special and loved With you I feel understood accepted and truly seen Ikaw ang akong best friend akong partner akong forever and I am so grateful for every single moment with you Us is my favorite thing in the world I promise nga I will always care for us protect our love and choose you every single day I will make you smile wipe your tears hug you tight when you feel lost and celebrate every small and big victory with you I will support you in your dreams hold your hand through challenges and always remind you nga ikaw akong everything You make my life better mommy and you inspire me to be a better person to love harder and to dream bigger I love our little things our inside jokes the way we tease each other the way we understand each other without saying a word the way your hand fits perfectly in mine I love the way we build memories together even in the simplest moments Every sunrise every sunset every laugh we share every tear we wipe away together makes me realize nga ikaw ra gyud ang gusto nako kauban sa tibuok kinabuhi Ikaw ang akong forever ang akong home ang akong heart ang akong soul Mommy I want you to know nga bisan unsa pa ang moabot I will always choose us I will fight for our love protect our happiness and never let anything come between us I want to be your safe place like you are mine I want to love you in ways nga make you feel important cherished and forever loved I will never stop showing you how much you mean to me You are my sunshine my reason my motivation my peace my love my life and my forever I cannot wait to make more memories with you to travel together to dream together to laugh to hug and to hold you close sa every sunrise and sunset Every day with you is a blessing and I am so grateful nga ikaw ang akong partner in this journey called life Mommy I love us our love our bond our story and I promise nga I will never take it for granted You and me mommy us together I will always fight for us I will always protect us I will always love us with all my heart all my soul and all my life 🫶💖✨ You are my dream come true my forever and the best part of my life I love you more than words more than time and more than anything else in this world Ikaw ang akong everything mommy and I promise nga I will love you choose you and stay with you until my last breath Thank you for being mine for letting me love you and for being my everything I love us mommy so deeply so completely so endlessly.';
+  
+
+  const letterBox = document.getElementById("letter");
+  const startBtn = document.getElementById("startBtn");
+  const music = document.getElementById("music");
+  const topDesign = document.getElementById("topDesign");
+
+  let index = 0;
+
+  function typeWriter() {
+    if (index < fullMessage.length) {
+      letterBox.textContent += fullMessage.charAt(index);
+      index++;
+      setTimeout(typeWriter, 25);
+    }
+  }
+
+  startBtn.addEventListener("click", () => {
+    music.play();
+    startBtn.style.display = "none";
+    typeWriter();
+  });
+
+  function spawnHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.textContent = "💜";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+
+  function spawnTopHeart() {
+    const topHeart = document.createElement("div");
+    topHeart.classList.add("top-heart");
+    topHeart.textContent = "💜";
+    topHeart.style.left = Math.random() * 100 + "vw";
+    topDesign.appendChild(topHeart);
+    setTimeout(() => topHeart.remove(), 5000);
+  }
+
+  setInterval(spawnHeart, 300);
+  setInterval(spawnTopHeart, 400);
+</script>
+</body>
+</html>
